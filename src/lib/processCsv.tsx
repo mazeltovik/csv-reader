@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { Product } from '@/components/ui/csvData/columns';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const filesPath = path.join(__dirname, '../', 'csv');
+const filesPath = path.join(process.cwd(), 'csv');
 
 const files = new Map<string, Product[]>();
 
