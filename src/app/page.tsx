@@ -49,11 +49,13 @@ export default function Home() {
               setTableData(data);
               setId(id);
             } catch (err) {
-              toast({
-                variant: 'destructive',
-                title: 'Uh oh! Something went wrong.',
-                description: `${err.message}`,
-              });
+              if (err instanceof Error) {
+                toast({
+                  variant: 'destructive',
+                  title: 'Uh oh! Something went wrong.',
+                  description: `${err.message}`,
+                });
+              }
             }
           }
         };

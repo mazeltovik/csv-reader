@@ -34,7 +34,14 @@ export const PopupProvider = ({
 }>) => {
   const [open, setOpen] = useState(false);
   const [id, setId] = useState('');
-  const [data, setData] = useState<Product>({});
+  const [data, setData] = useState<Product>({
+    id: '',
+    product: '',
+    status: '',
+    fulfilmentCentr: '',
+    qty: '',
+    value: '',
+  });
   return (
     <PopupContext.Provider
       value={{
